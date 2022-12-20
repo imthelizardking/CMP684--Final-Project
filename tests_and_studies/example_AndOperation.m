@@ -1,7 +1,7 @@
 % from M.Ö.E. CMP684 Slides, page 70
-clear all
-close all
-clc
+clear all;
+close all;
+clc;
 U = [0 0;0 1;1 0;1 1];
 Y = [0 0 0 1]';
 Phi = 2*rand(3,1)-1;
