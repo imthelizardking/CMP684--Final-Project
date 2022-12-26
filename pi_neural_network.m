@@ -7,14 +7,14 @@
 %
 %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-clear all; close all; clc;
-load('temp_signals_2.mat');
+% clear all; close all; clc;
+% load('temp_signals_2.mat');
 DIM_INP = 1; DIM_HID = 10; DIM_OUT = 1;
-q_in = q_in/abs(max(q_in)); % normalize
-U = q_in;
+speed_pi_input = speed_pi_input/abs(max(speed_pi_input)); % normalize
+U = speed_pi_input;
 nSamples = max(size(U));
-q_out = q_out/abs(max(q_out)); % normalize
-Y = q_out;
+speed_pi_output = speed_pi_output/abs(max(speed_pi_output)); % normalize
+Y = speed_pi_output;
 Phi = 1*rand(DIM_INP+1,1)-1; % randomly start weights (3x1)
 Eta = 1;
 PHI(1,:)=Phi'; % weight dictionary
